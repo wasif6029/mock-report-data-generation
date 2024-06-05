@@ -13,7 +13,7 @@ def batch_insert_transactions(transactions, batch_size=100000):
         cursor = conn.cursor()
 
         insert_statement = """
-        INSERT INTO report.transaction_report_mock (
+        INSERT INTO report.transaction_report (
             id, created_by, updated_by, create_date_time, update_date_time, is_deleted,
             request_id, transaction_id, workflow_request_id, transaction_type,
             transaction_code, from_account_name, to_account_name, from_internal_account,
